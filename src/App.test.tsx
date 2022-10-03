@@ -26,3 +26,10 @@ describe('Simple working test', () => {
     expect(getComputedStyle(element).display).toEqual('flex')
   })
 })
+
+describe('Snapshot test', () => {
+  it('renders App unchanged', () => {
+    const { container } = render(<App />)
+    expect(container).toMatchSnapshot()
+  })
+})
