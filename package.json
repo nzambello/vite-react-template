@@ -1,12 +1,15 @@
 {
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "ladle": "ladle serve",
+    "test:e2e:debug": "playwright test --debug",
+    "test:e2e": "playwright test",
     "test": "vitest",
     "coverage": "vitest run --coverage",
+    "prepreview": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,14 +17,20 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.4.5",
+    "@ladle/react": "2.4.3",
+    "@playwright/test": "1.26.1",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@testing-library/react-hooks": "8.0.1",
     "@testing-library/user-event": "14.4.3",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/sync-fetch": "0.4.0",
     "@vitejs/plugin-react": "^2.1.0",
     "jsdom": "20.0.1",
+    "start-server-and-test": "1.14.0",
+    "sync-fetch": "0.4.2",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
     "vitest": "0.23.4"

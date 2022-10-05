@@ -25,31 +25,33 @@ exports[`Snapshot test > renders App unchanged 1`] = `
         <img
           alt="React logo"
           class="logo react"
-          src="/src/assets/react.svg"
+          src="/react.svg"
         />
       </a>
     </header>
-    <h1>
-      Hello Vite + React!
-    </h1>
-    <div
-      class="card"
-    >
-      <button>
-        Increment
-      </button>
-      <p>
-        Count is: 
-        0
-      </p>
-      <p>
-        Edit 
-        <code>
-          src/App.tsx
-        </code>
-         and save to test HMR
-      </p>
-    </div>
+    <main>
+      <h1>
+        Hello Vite + React!
+      </h1>
+      <div
+        class="card"
+      >
+        <button>
+          Increment
+        </button>
+        <p>
+          Count is: 
+          0
+        </p>
+        <p>
+          Edit 
+          <code>
+            src/App.tsx
+          </code>
+           and save to test HMR
+        </p>
+      </div>
+    </main>
     <p
       class="read-the-docs"
     >
