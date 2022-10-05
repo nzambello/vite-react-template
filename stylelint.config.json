@@ -1,0 +1,11 @@
+{
+  "extends": ["stylelint-config-recommended", "stylelint-config-prettier", "stylelint-config-prettier-scss", "stylelint-config-idiomatic-order"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["extend", "function", "include", "mixin", "return"]
+      }
+    ]
+  }
+}
