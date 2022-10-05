@@ -8,7 +8,7 @@
     "format": "prettier --write src e2e && yarn lint:css --fix",
     "lint:css": "stylelint \"src/*.css\"",
     "lint:js": "eslint \"src/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}\"",
-    "lint": "eslint && stylelint",
+    "lint": "yarn lint:js && yarn lint:css",
     "ladle": "ladle serve",
     "test:e2e:debug": "NODE_ENV=test playwright test --debug",
     "test:e2e": "NODE_ENV=test playwright test",
@@ -38,20 +38,10 @@
       }
     ]
   },
-  "eslintIgnore": [
-    "/node_modules",
-    "/build",
-    "/public/build"
-  ],
+  "eslintIgnore": ["/node_modules", "/build", "/public/build"],
   "eslintConfig": {
-    "extends": [
-      "prettier",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "jsx-a11y",
-      "jest"
-    ],
+    "extends": ["prettier", "plugin:prettier/recommended"],
+    "plugins": ["jsx-a11y", "jest"],
     "settings": {
       "jest": {
         "version": 27
@@ -77,22 +67,12 @@
     }
   },
   "stylelint": {
-    "extends": [
-      "stylelint-config-recommended",
-      "stylelint-config-prettier",
-      "stylelint-config-idiomatic-order"
-    ],
+    "extends": ["stylelint-config-recommended", "stylelint-config-prettier", "stylelint-config-idiomatic-order"],
     "rules": {
       "at-rule-no-unknown": [
         true,
         {
-          "ignoreAtRules": [
-            "extend",
-            "function",
-            "include",
-            "mixin",
-            "return"
-          ]
+          "ignoreAtRules": ["extend", "function", "include", "mixin", "return"]
         }
       ]
     }
