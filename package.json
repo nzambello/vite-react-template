@@ -38,10 +38,20 @@
       }
     ]
   },
-  "eslintIgnore": ["/node_modules", "/build", "/public/build"],
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public/build"
+  ],
   "eslintConfig": {
-    "extends": ["prettier", "plugin:prettier/recommended"],
-    "plugins": ["jsx-a11y", "jest"],
+    "extends": [
+      "prettier",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "jsx-a11y",
+      "jest"
+    ],
     "settings": {
       "jest": {
         "version": 27
@@ -67,14 +77,63 @@
     }
   },
   "stylelint": {
-    "extends": ["stylelint-config-recommended", "stylelint-config-prettier", "stylelint-config-idiomatic-order"],
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-prettier",
+      "stylelint-config-idiomatic-order"
+    ],
     "rules": {
       "at-rule-no-unknown": [
         true,
         {
-          "ignoreAtRules": ["extend", "function", "include", "mixin", "return"]
+          "ignoreAtRules": [
+            "extend",
+            "function",
+            "include",
+            "mixin",
+            "return"
+          ]
         }
       ]
+    }
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}",
+      "commitMessage": "chore: release v${version}"
+    },
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": true,
+      "releaseName": "${version}"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "refactor",
+              "section": "Changes"
+            },
+            {
+              "type": "chore",
+              "section": "Maintenance"
+            }
+          ]
+        }
+      }
     }
   },
   "dependencies": {
