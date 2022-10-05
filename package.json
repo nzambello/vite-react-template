@@ -1,6 +1,10 @@
 {
   "private": true,
   "version": "0.0.0",
+  "author": {
+    "name": "Nicola Zambello",
+    "url": "https://github.com/nzambello"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
