@@ -5,6 +5,20 @@ on:
   pull_request:
     branches: [main, master]
 jobs:
+  lint:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: yarn
+      - name: Run eslint
+        run: yarn lint:js
+      - name: Run stylelint
+        run: yarn lint:css
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
@@ -17,3 +31,11 @@ jobs:
         run: yarn
       - name: Run Vitest unit and snapshot tests
         run: yarn test
+      - name: Vitest coverage
+        run: yarn test --coverage
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: vitest-coverage
+          path: coverage/
+          retention-days: 30
