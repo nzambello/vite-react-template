@@ -24,7 +24,7 @@ This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang
 
 ### Misc
 
-- [Ladle](https://ladle.dev/)
+- [Storybook](https://storybook.js.org)
 - [Release-it](https://github.com/release-it/release-it)
 - [GitHub Actions](https://github.com/nzambello/vite-react-template/actions)
 
@@ -101,7 +101,7 @@ yarn preview
 ### Component stories
 
 ```bash
-yarn ladle
+yarn storybook
 ```
 
 ### Test commands
