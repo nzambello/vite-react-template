@@ -1,5 +1,10 @@
 # vite-react-template
 
+![TypeScript](https://img.shields.io/badge/TypeScript-✔️-blue)
+![a11y axe](https://img.shields.io/badge/a11y-tested-brightgreen)
+![Unit Tests](https://github.com/nzambello/vite-react-template/workflows/Unit%20Tests/badge.svg?branch=main)
+![E2E Tests](https://github.com/nzambello/vite-react-template/workflows/E2E%20Tests/badge.svg?branch=main)
+
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) boilerplate built with [Vite](https://vitejs.dev).
 
 ## What's inside?
