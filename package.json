@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "format": "prettier --write src e2e",
     "ladle": "ladle serve",
     "test:e2e:debug": "playwright test --debug",
     "test:e2e": "playwright test",
@@ -11,6 +12,25 @@
     "coverage": "vitest run --coverage",
     "prepreview": "vite build",
     "preview": "vite preview"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": "*.scss",
+        "options": {
+          "tabWidth": 4,
+          "printWidth": 120
+        }
+      },
+      {
+        "files": "*.json",
+        "options": {
+          "printWidth": 200
+        }
+      }
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -29,6 +49,7 @@
     "@types/sync-fetch": "0.4.0",
     "@vitejs/plugin-react": "^2.1.0",
     "jsdom": "20.0.1",
+    "prettier": "2.7.1",
     "start-server-and-test": "1.14.0",
     "sync-fetch": "0.4.2",
     "typescript": "^4.6.4",

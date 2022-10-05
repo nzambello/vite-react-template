@@ -1,3 +1,3 @@
 export default {
-  defaultStory: "a11y--welcome",
+  defaultStory: 'a11y--welcome'
 };
